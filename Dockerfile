@@ -8,5 +8,4 @@ RUN apt-get update \
         tzdata  byobu curl git htop man unzip vim wget iputils-ping wget net-tools  \
     && sed -i "s@http://.*.ubuntu.com@https://mirrors.aliyun.com@g" /etc/apt/sources.list \
     && rm -rf /var/apt/cache/*
-
-COPY ./context/aliyun /root/
+CMD ["bash"]
